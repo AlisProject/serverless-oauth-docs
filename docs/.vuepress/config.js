@@ -8,6 +8,7 @@ module.exports = {
     ],
     sidebar: [
       '/getting-start/',
+      '/scopes/',
       '/term/'
     ]
   }
