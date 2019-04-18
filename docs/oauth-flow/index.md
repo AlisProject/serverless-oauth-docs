@@ -5,7 +5,7 @@
 ### 概要
 
 「Authorization Code Grant + PKCE + ClientSecret」にて認可を行い、API アクセスを行います。
-認可フローの詳細については[こちら](#補足：api実行までのフロー)
+認可フローの詳細については[api実行までのフロー](#補足：api実行までのフロー)を参照してください
 
 ### 手順１：認可コード取得
 
@@ -33,7 +33,14 @@ grant_type=authorization_code
 &code_verifier=7vN7KSmEl5qFeHeRZmfMsR7fl_BsluESjvl32W9el5A6WgsAbXCaqwK43BmXjs7cGw9hTQC9xmVb41xi8fL4CA
 ```
 
-### 手順３：API 実行サンプル
+### 手順３：ID tokenの検証
+
+ID tokenの署名を検証します。
+公開鍵はJWKsエンドポイントにて取得可能です。
+
+### 手順４：API 実行サンプル
+
+取得したアクセストークンをAuthorization: Bearer ヘッダを使ってAPIエンドポイントへリクエストを送信します。
 
 ```javascript
   const result = await fetch(url, {
@@ -52,7 +59,7 @@ grant_type=authorization_code
 
 ネイティブアプリケーションはClientSecretを秘匿できないので、
 「Authorization Code Grant + PKCE」にて認可を行い、API アクセスを行います。
-認可フローの詳細については[こちら](#補足：api実行までのフロー)
+認可フローの詳細については[api実行までのフロー](#補足：api実行までのフロー)を参照してください
 
 ### 手順１：認可コード取得
 
@@ -77,8 +84,14 @@ grant_type=authorization_code
 &code_verifier=7vN7KSmEl5qFeHeRZmfMsR7fl_BsluESjvl32W9el5A6WgsAbXCaqwK43BmXjs7cGw9hTQC9xmVb41xi8fL4CA
 ```
 
-### 手順３：API 実行サンプル
+### 手順３：ID tokenの検証
 
+ID tokenの署名を検証します。
+公開鍵はJWKsエンドポイントにて取得可能です。
+
+### 手順４：API 実行サンプル
+
+取得したアクセストークンをAuthorization: Bearer ヘッダを使ってAPIエンドポイントへリクエストを送信します。
 
 ```javascript
   const result = await fetch(url, {
