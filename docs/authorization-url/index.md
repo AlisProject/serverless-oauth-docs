@@ -1,10 +1,9 @@
-# Oauth認証画面への飛ばし方
-
+# Oauth認可画面URLの作り方
 
 ## 概要
 
 認可コード取得にはユーザーの許可が必要です。
-認証画面は https://alis.to/oauth というURLに以下のクエリパラメータを加えてください。
+認可画面は https://alis.to/oauth というURLに以下のクエリパラメータを加えてください。
 
 * client_id
 * redirect_uri
@@ -15,22 +14,21 @@
 
 ### client_id
 
-Oauthアプリケーションを登録した際に発行されたclient_idを指定して下さい
+OAuthアプリケーションを登録した際に発行されたclient_idを指定して下さい
 
 ### redirect_uri
 
-Oauthアプリケーションを登録した際に指定したredirect_uriの内一つを指定して下さい。
+OAuthアプリケーションを登録した際に指定したredirect_uriの内一つを指定して下さい。
 
 ### scope
 
-Oauthアプリケーションのscopeを指定します。
-`openid read` もしくは `openid write` のみ指定できます。
+OAuthアプリケーションのscopeを指定します。
+`read` もしくは `write` のみ指定できます。
 
 ### code_challenge
 
 [PKCE](https://tools.ietf.org/html/rfc7636#appendix-B)で使用するパラメータです。
-Oauthクライアント側でcode_verifierを生成し、code_challengeを計算して下さい。
-code_challenge_methodは`S256`固定です。
+ALIS APIを使用するアプリケーション側でcode_verifierを生成し、code_challengeを計算して下さい。
 
 例) 
 
