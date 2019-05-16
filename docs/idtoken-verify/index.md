@@ -3,8 +3,11 @@
 
 ## ID token
 
-アクセストークン取得の際にID tokenが同時に渡されます
-id_tokenはjwtの形式になっているので、https://oauth2.alis.to/jwks で取得できる公開鍵で署名を検証してください
+ID Tokenとはユーザーの認証情報を含む署名付きのトークンで、jwtフォーマットでエンコードされています。
+ALISのユーザ情報を元にアプリケーションでユーザ認証を行う場合は必ずID tokenを使用してセッション等のユーザ認証管理を行ってください。
+
+署名検証に用いる公開鍵は、[jwksエンドポイント](https://oauth2.alis.to/jwks)にて公開されています。
+
 
 アクセストークン取得時のレスポンス例
 ```json
@@ -18,11 +21,15 @@ id_tokenはjwtの形式になっているので、https://oauth2.alis.to/jwks �
 }
 ```
 
-検証するポイントは以下の通りです。
+# 検証手順
 
-* jwtが https://oauth2.alis.to/jwks で取得できる公開鍵で検証できること
-* 有効期限(exp)が現在の時刻を過ぎていない事
-* 署名者(iss)が https://oauth2.alis.to であること
+1. jwtトークンをピリオドで分割します。jwtはそれぞれHeader, Payload, Signatureとなっています。
+2. ヘッダ部分をbase64URLデコードし,鍵の種類(kid)と署名アルゴリズム(alg)を特定します
+3. [jwksエンドポイント](https://oauth2.alis.to/jwks)から公開鍵を取得します
+4. 2で取得したkidと同じ公開鍵を特定します
+5. 2で取得した署名アルゴリズム(alg)に基づいて署名を検証します 署名範囲は Header + "." + Payload部分です
+6. Payload内のexpが現在時刻(UNIXタイム)が現在時刻より大きいことを確認します
+7. issの値が `https://oauth2.alis.to` であることを確認します
 
 ## 検証コード例
 
