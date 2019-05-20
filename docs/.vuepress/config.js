@@ -8,8 +8,10 @@ module.exports = {
     ],
     sidebar: [
       '/getting-start/',
+      '/authorization-url/',
+      '/idtoken-verify/',
       '/scopes/',
-      '/idtoken-verify/'
+      '/term/'
     ]
   }
 }
