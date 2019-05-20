@@ -8,6 +8,7 @@ module.exports = {
     ],
     sidebar: [
       '/getting-start/',
+      '/oauth-flow/',
       '/authorization-url/',
       '/idtoken-verify/',
       '/scopes/',
