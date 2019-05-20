@@ -8,7 +8,7 @@ module.exports = {
     ],
     sidebar: [
       '/getting-start/',
-      '/term/',
+      '/scopes/',
       '/idtoken-verify/'
     ]
   }
