@@ -8,7 +8,8 @@ module.exports = {
     ],
     sidebar: [
       '/getting-start/',
-      '/term/'
+      '/term/',
+      '/idtoken-verify/'
     ]
   }
 }
