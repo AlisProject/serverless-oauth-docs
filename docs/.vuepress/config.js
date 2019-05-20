@@ -1,6 +1,7 @@
 module.exports = {
   title: 'ALIS OAuth Document',
   description: 'ALIS OAuth Document',
+  base: "/oauth2/",
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
