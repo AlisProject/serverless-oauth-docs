@@ -20,7 +20,7 @@
 
 ### 手順２：アクセストークンの取得
 
-事前に [アプリケーション登録](http://example.com)にて登録したアプリケーション（クライアントタイプ：サーバーサイドアプリケーション）より、Client ID と Client Secret を取得します。
+事前に [アプリケーション登録](http://alis.to/me/settings/applications)にて登録したアプリケーション（クライアントタイプ：サーバーサイドアプリケーション）より、Client ID と Client Secret を取得します。
 この Client ID と Client Secret を元に https://alis.to/oauth2/token へ下記例を参考にリクエストし、Access Token, Refresh Token, ID tokenを取得します。
 
 
@@ -84,7 +84,7 @@ ID token の署名を検証します。検証方法については [ID token の
 
 ### 手順２：アクセストークンの取得
 
-事前に [アプリケーション登録](http://example.com)にて登録したアプリケーション（クライアントタイプ：ネイティブアプリケーション）より、Client ID を取得します。
+事前に [アプリケーション登録](http://alis.to/me/settings/applications)にて登録したアプリケーション（クライアントタイプ：ネイティブアプリケーション）より、Client ID を取得します。
 この Client ID を元に https://alis.to/oauth2/token へ下記例を参考にリクエストし、Access Token, Refresh Token, ID tokenを取得します。
 
 
