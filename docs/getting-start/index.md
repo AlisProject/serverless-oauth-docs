@@ -1,5 +1,7 @@
 # 利用までの流れ
-1. [利用規約](http://example.com)を確認する
-2. [ALISのアカウント登録](http://example.com)を行う
-3. [クライアントIDの取得](http://example.com)を行う
-4. [Authorization Codeフロー](http://example.com)に沿ってアプリケーションの開発を行う
+1. [利用規約](/term/)を確認する
+2. [ALISのアカウント登録](https://alis.to/)を行う
+3. [アプリケーション登録](http://example.com)を行う
+4. OAuth2.0 を利用した API 実行手順を確認し、アプリケーションを開発する
+    - [サーバーサイドアプリケーション向け](/oauth-flow/#サーバサイドアプリケーション向け)
+    - [ネイティブアプリケーション向け](/oauth-flow/#ネイティブアプリケーション向け)
