@@ -90,8 +90,8 @@ ID token の署名を検証します。検証方法については [ID token の
 
 リクエスト例
 ```
-POST /token HTTP/1.1
-Host: oauth2.alis.to
+POST /oauth2/token HTTP/1.1
+Host: alis.to
 Content-Type: application/x-www-form-urlencoded
  
 grant_type=authorization_code
