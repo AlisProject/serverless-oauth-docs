@@ -57,7 +57,6 @@ ALIS OAuth では権限によって利用できる Web API を制限しており
 | PUT /me/articles/{article_id}/public/body | 公開記事のbody更新 |  | ○ | [Document](https://alisproject.github.io/api-docs/#/default/put_me_articles_article_id_public_body)
 | GET /users/{user_id}/info | 指定されたユーザーのユーザ情報を取得 | ○ | ○ | [Document](https://alisproject.github.io/api-docs/#/default/get_users_user_id_info)
 | GET /me/wallet/balance | ログインユーザ情報を取得 | ○ | ○ | [Document](https://alisproject.github.io/api-docs/#/default/get_me_wallet_balance)
-| GET /me/wallet/distributed_tokens | ログインユーザのトークン付与情報を取得 | ○ | ○ | [Document](https://alisproject.github.io/api-docs/#/default/get_me_wallet_distributed_tokens)
 | GET /me/notifications | ログインユーザーの通知の一覧を取得 | ○ | ○ | [Document](https://alisproject.github.io/api-docs/#/default/get_me_notifications)
 | GET /me/unread_notification_managers | ログインユーザーの通知の未読情報を取得 | ○ | ○ | [Document](https://alisproject.github.io/api-docs/#/default/get_me_unread_notification_managers)
 | PUT /me/unread_notification_managers | ログインユーザーの通知の未読情報を未読に更新する | ○ | ○ | [Document](https://alisproject.github.io/api-docs/#/default/put_me_unread_notification_managers)
