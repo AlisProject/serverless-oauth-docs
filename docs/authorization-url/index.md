@@ -40,11 +40,11 @@ ALIS API を使用するアプリケーション側で code_verifier を生成�
 
 * client_id = `12345678901234`
 * redirect_uri = `https://example.com`
-* scope = `openid read`
+* scope = `read`
 * code_challenge = `hcCb3gToI1GPZeS_SIYWvaNT_5u0GB1oqOGQJqRKMSE`
 
 上記パラメーターの場合,URL は下記の通りです。
 
     
-    https://alis.to/oauth?client_id=12345678901234&redirect_uri=https%3A%2F%2Fexample.com&scope=openid+read&code_challenge=hcCb3gToI1GPZeS_SIYWvaNT_5u0GB1oqOGQJqRKMSE
+    https://alis.to/oauth?client_id=12345678901234&redirect_uri=https%3A%2F%2Fexample.com&scope=read&code_challenge=hcCb3gToI1GPZeS_SIYWvaNT_5u0GB1oqOGQJqRKMSE
 
