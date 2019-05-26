@@ -13,7 +13,8 @@ module.exports = {
       '/oauth-flow/',
       '/authorization-url/',
       '/idtoken-verify/',
-      '/scopes/'
+      '/scopes/',
+      '/refresh-token/'
     ]
   }
 }
