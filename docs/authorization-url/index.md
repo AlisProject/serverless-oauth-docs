@@ -35,6 +35,33 @@ ALIS API を使用するアプリケーション側で code_verifier を生成�
     code_verifier = "dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk"
     code_challenge = "E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM"
 
+code_verifier, code_challenge生成例
+
+```javascript
+"use strict";
+const base64url = require("base64url");
+const sha256 = require("js-sha256");
+(async () => {
+  const code_verifier = get_code_verifier();
+  const code_challenge = get_code_challenge(code_verifier);
+  console.log(
+    `code_verifier = ${code_verifier}\ncode_challenge = ${code_challenge}`
+  );
+})();
+function get_code_challenge(str) {
+  const hash = sha256.arrayBuffer(str);
+  return base64url(hash);
+}
+function get_code_verifier() {
+  let buf = Buffer.alloc(32);
+  for (let i = 0; i < buf.length; i++) {
+    const random_num = Math.floor(Math.random() * 256);
+    buf.writeUInt8(random_num, i);
+  }
+  return base64url(buf);
+}
+```
+
 ## URL例
 
 
