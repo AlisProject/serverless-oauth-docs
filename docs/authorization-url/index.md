@@ -3,7 +3,7 @@
 ## 概要
 
 認可コード取得にはユーザーの許可が必要です。
-同意画面へ遷移する際は https://alis.to/oauth-authenticate という URL に以下のクエリパラメータを加えてください。
+同意画面へ遷移する際は `https://alis.to/oauth-authenticate` の URL に以下のクエリパラメータを加えてください。
 
 * client_id
 * redirect_uri
@@ -73,5 +73,5 @@ function get_code_verifier() {
 上記パラメーターの場合,URL は下記の通りです。
 
     
-    https://alis.to/oauth?client_id=12345678901234&redirect_uri=https%3A%2F%2Fexample.com&scope=read&code_challenge=hcCb3gToI1GPZeS_SIYWvaNT_5u0GB1oqOGQJqRKMSE
+    https://alis.to/oauth-authenticate?client_id=12345678901234&redirect_uri=https%3A%2F%2Fexample.com&scope=read&code_challenge=hcCb3gToI1GPZeS_SIYWvaNT_5u0GB1oqOGQJqRKMSE
 
