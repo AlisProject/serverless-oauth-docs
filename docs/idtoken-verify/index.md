@@ -50,10 +50,6 @@ const iss = "https://alis.to/oauth2";
       jwt.decode(token, { complete: true }).header.kid
     );
     const decoded = jwt.verify(token, sig_key);
-    const now_unixtime = Math.floor(new Date().getTime() / 1000);
-    if (now_unixtime > decoded.exp) {
-      throw new Error("this idtoken is expired.");
-    }
     if (decoded.iss !== iss) {
       throw new Error(`this idtoken's iss is not ${iss}`);
     }
