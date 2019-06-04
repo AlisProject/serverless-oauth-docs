@@ -23,7 +23,7 @@ ALIS のユーザ情報を元にアプリケーションでユーザ認証を行
 
 # 検証手順
 
-1. jwt トークンをピリオドで分割します。jwt はそれぞれ Header, Payload, Signatureとなっています。
+1. id_token をピリオドで分割し Header, Payload, Signature を取得します。
 2. ヘッダ部分を base64URL デコードし,鍵の種類(kid)と署名アルゴリズム(alg)を特定します
 3. [jwksエンドポイント](https://alis.to/oauth2/jwks)から公開鍵を取得します
 4. 2で取得した kid と同じ公開鍵を特定します

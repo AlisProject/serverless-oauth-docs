@@ -49,16 +49,16 @@ ID token の署名を検証します。検証方法については [ID token の
 
 ### 手順４：API 実行サンプル
 
-取得したアクセストークン(Access Token)を Authorization: Bearer ヘッダに付与することで、API 実行を行えます。
+取得したアクセストークン(Access Token)を Authorization ヘッダに付与することで、API 実行を行えます。
 実行できる API は同意時に指定した scope によって異なります。詳細は[権限一覧](/scopes/)を確認ください。
-アクセストークンには有効期限が設定されています。再取得する場合は[アクセストークンの再取得](/refresh-token/)を参照してください
+また、アクセストークンには有効期限が設定されています。再取得する場合は[アクセストークンの再取得](/refresh-token/)を参照してください
 
 
 ```javascript
   const result = await fetch(url, {
     method: "POST",
     headers: {
-      "Authorization": `Bearer ${access_token}`,
+      "Authorization": `${access_token}`,
       "Content-Type": "application/json; charset=utf-8"
     },
     body: JSON.stringify(data)
@@ -113,15 +113,15 @@ ID token の署名を検証します。検証方法については [ID token の
 
 ### 手順４：API 実行サンプル
 
-取得したアクセストークン(Access Token)を Authorization: Bearer ヘッダに付与することで、API 実行を行えます。
+取得したアクセストークン(Access Token)を Authorization ヘッダに付与することで、API 実行を行えます。
 実行できる API は同意時に指定した scope によって異なります。詳細は[権限一覧](/scopes/)を確認ください。
-アクセストークンには有効期限が設定されています。再取得する場合は[アクセストークンの再取得](/refresh-token/)を参照してください
+また、アクセストークンには有効期限が設定されています。再取得する場合は[アクセストークンの再取得](/refresh-token/)を参照してください
 
 ```javascript
   const result = await fetch(url, {
     method: "POST",
     headers: {
-      "Authorization": `Bearer ${access_token}`,
+      "Authorization": `${access_token}`,
       "Content-Type": "application/json; charset=utf-8"
     },
     body: JSON.stringify(data)
@@ -130,5 +130,6 @@ ID token の署名を検証します。検証方法については [ID token の
 
 ### 参考： 認可フローについて
 
-* [PKCE](https://www.authlete.com/documents/article/pkce)
 * [Authorization Code Grant](https://tools.ietf.org/html/rfc6749#section-4.1)
+* [PKCE](https://www.authlete.com/documents/article/pkce)
+
