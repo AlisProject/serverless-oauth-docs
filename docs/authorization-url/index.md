@@ -35,7 +35,7 @@ ALIS API を使用するアプリケーション側で code_verifier を生成�
     code_verifier = "dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk"
     code_challenge = "E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM"
 
-code_verifier, code_challenge 生成例
+code_verifier, code_challenge 生成例 (JavaScript)
 
 ```javascript
 "use strict";

@@ -31,8 +31,7 @@ ALIS のユーザ情報を元にアプリケーションでユーザ認証を行
 6. Payload 内の exp が現在時刻(UNIXタイム)が現在時刻より大きいことを確認します
 7. iss の値が`https://alis.to/oauth2`であることを確認します
 
-## 検証コード例
-
+## 検証コード例 (JavaScript)
 
 ```javascript
 "use strict";

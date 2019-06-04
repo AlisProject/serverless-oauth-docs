@@ -114,7 +114,9 @@ ID token の署名を検証します。検証方法については [ID token の
 
 取得したアクセストークン(Access Token)を Authorization ヘッダに付与することで、API 実行を行えます。
 実行できる API は同意時に指定した scope によって異なります。詳細は[権限一覧](/scopes/)を確認ください。
-また、アクセストークンには有効期限が設定されています。再取得する場合は[アクセストークンの再取得](/refresh-token/)を参照してください
+また、アクセストークンには有効期限が設定されています。再取得する場合は[アクセストークンの再取得](/refresh-token/)を参照してください。
+
+実行例 (JavaScript)
 
 ```javascript
   const result = await fetch(url, {
