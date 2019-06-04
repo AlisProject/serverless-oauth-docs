@@ -5,15 +5,15 @@
 
 * access_token: 3600 秒
 * refresh_token: 無期限
-* id_token: 3600秒 
+* id_token: 3600秒
 
-access_tokenの有効期限が切れた場合はrefresh_tokenを用いて再取得してください
+access_token の有効期限が切れた場合は refresh_token を用いて再取得してください。
 
-リクエストは以下のパラメーターを指定してください
+リクエストは以下のパラメーターを指定してください。
 
 * grant_type: refresh_token
 * refresh_token: (取得したrefresh_token)
-* client_id: ネィテイブアプリのみclient_idを指定してください
+* client_id: ネイティブアプリのみ client_id を指定してください
 
 ## サーバサイドアプリケーション向け
 
