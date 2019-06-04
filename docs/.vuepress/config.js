@@ -8,7 +8,6 @@ module.exports = {
       { text: 'Term', link: '/term/' }
     ],
     sidebar: [
-      '/getting-start/',
       '/term/',
       '/oauth-flow/',
       '/authorization-url/',
