@@ -14,11 +14,11 @@
 
 ### client_id
 
-OAuth アプリケーションを登録した際に発行されたclient_idを指定して下さい
+OAuth アプリケーションを登録した際に発行された client_id を指定して下さい
 
 ### redirect_uri
 
-OAuth アプリケーションを登録した際に指定したredirect_uriの内一つを指定して下さい。
+OAuth アプリケーションを登録した際に指定した redirect_uri の内一つを指定して下さい。
 
 ### scope
 
@@ -35,7 +35,7 @@ ALIS API を使用するアプリケーション側で code_verifier を生成�
     code_verifier = "dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk"
     code_challenge = "E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM"
 
-code_verifier, code_challenge生成例
+code_verifier, code_challenge 生成例
 
 ```javascript
 "use strict";
@@ -72,6 +72,5 @@ function get_code_verifier() {
 
 上記パラメーターの場合,URL は下記の通りです。
 
-    
     https://alis.to/oauth-authenticate?client_id=12345678901234&redirect_uri=https%3A%2F%2Fexample.com&scope=read&code_challenge=hcCb3gToI1GPZeS_SIYWvaNT_5u0GB1oqOGQJqRKMSE
 

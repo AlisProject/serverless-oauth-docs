@@ -14,8 +14,7 @@
 
 ユーザ側で同意が行われると上記 URL 作成時に指定した redirect_uri へリダイレクトされ、query string より認可コード(code)を取得できます。
 
-例) 
-  https://example.com/oauth?code=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+例) https://example.com/oauth?code=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
 ### 手順２：アクセストークンの取得
@@ -30,7 +29,7 @@ POST /oauth2/token HTTP/1.1
 Host: alis.to
 Content-Type: application/x-www-form-urlencoded
 Authorization: Basic xxxxxxxxxxxxxxxxx
- 
+
 grant_type=authorization_code
 &code=xxxxxxxxxxxxxxx
 &redirect_uri=https%3A%2F%2Fclient.example.org%2Fcb
@@ -38,7 +37,7 @@ grant_type=authorization_code
 ```
 - Authorization: Client IDと Client Secretを":"(コロン)で連結し、Base64エンコードした値
 - code: 手順1で取得した認可コード
-- redirect_uri: [同意画面へのURL作成方法](/authorization-url/)) で指定した redirect_uri
+- redirect_uri: [同意画面へのURL作成方法](/authorization-url/) で指定した redirect_uri
 - code_verifier: [同意画面へのURL作成方法](/authorization-url/) で作成した code_verifier
 
 
