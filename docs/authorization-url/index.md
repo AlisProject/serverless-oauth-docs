@@ -41,19 +41,20 @@ code_verifier, code_challenge 生成例 (JavaScript)
 "use strict";
 const base64url = require("base64url");
 const sha256 = require("js-sha256");
-(async () => {
-  const code_verifier = get_code_verifier();
-  const code_challenge = get_code_challenge(code_verifier);
-  console.log(
-    `code_verifier = ${code_verifier}\ncode_challenge = ${code_challenge}`
-  );
-})();
+
+const code_verifier = get_code_verifier();
+const code_challenge = get_code_challenge(code_verifier);
+
+console.log(`code_verifier = ${code_verifier}`);
+console.log(`code_challenge = ${code_challenge}`);
+
 function get_code_challenge(str) {
   const hash = sha256.arrayBuffer(str);
   return base64url(hash);
 }
+
 function get_code_verifier() {
-  let buf = Buffer.alloc(32);
+  const buf = Buffer.alloc(32);
   for (let i = 0; i < buf.length; i++) {
     const random_num = Math.floor(Math.random() * 256);
     buf.writeUInt8(random_num, i);

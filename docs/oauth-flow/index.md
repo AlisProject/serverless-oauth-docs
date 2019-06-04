@@ -119,14 +119,14 @@ ID token の署名を検証します。検証方法については [ID token の
 実行例 (JavaScript)
 
 ```javascript
-  const result = await fetch(url, {
-    method: "POST",
-    headers: {
-      "Authorization": `${access_token}`,
-      "Content-Type": "application/json; charset=utf-8"
-    },
-    body: JSON.stringify(data)
-  });
+const result = await fetch(url, {
+  method: "POST",
+  headers: {
+    "Authorization": `${access_token}`,
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  body: JSON.stringify(data)
+});
 ```
 
 ### 参考： 認可フローについて
