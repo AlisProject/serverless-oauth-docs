@@ -28,7 +28,7 @@ OAuth アプリケーションのscopeを指定します。
 ### code_challenge
 
 [PKCE](https://tools.ietf.org/html/rfc7636#appendix-B)で使用するパラメータです。
-ALIS API を使用するアプリケーション側で code_verifier を生成し、code_challenge を計算して下さい。
+ALIS API を使用するアプリケーション側で、リクエスト毎に code_verifier、code_challenge を生成し管理して下さい。
 
 例) 
 
