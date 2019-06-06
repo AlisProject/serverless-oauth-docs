@@ -20,7 +20,7 @@
 ### 手順２：アクセストークンの取得
 
 事前に [アプリケーション登録](http://alis.to/me/settings/applications)にて登録したアプリケーション（クライアントタイプ：サーバーサイドアプリケーション）より、Client ID と Client Secret を取得します。
-この Client ID と Client Secret を元に https://alis.to/oauth2/token へ下記例を参考にリクエストし、Access Token, Refresh Token, ID tokenを取得します。
+この Client ID と Client Secret を元に https://alis.to/oauth2/token へ下記例を参考にリクエストし、Access Token, Refresh Token, ID Tokenを取得します。
 
 
 リクエスト例
@@ -42,9 +42,9 @@ grant_type=authorization_code
 
 
 
-### 手順３：ID tokenの検証
+### 手順３：ID Tokenの検証
 
-ID token の署名を検証します。検証方法については [ID token の検証](/idtoken-verify/)を確認ください。
+ID Token の署名を検証します。検証方法については [ID Token の検証](/idtoken-verify/)を確認ください。
 
 ### 手順４：API 実行サンプル
 
@@ -85,7 +85,7 @@ ID token の署名を検証します。検証方法については [ID token の
 ### 手順２：アクセストークンの取得
 
 事前に [アプリケーション登録](http://alis.to/me/settings/applications)にて登録したアプリケーション（クライアントタイプ：ネイティブアプリケーション）より、Client ID を取得します。
-この Client ID を元に https://alis.to/oauth2/token へ下記例を参考にリクエストし、Access Token, Refresh Token, ID tokenを取得します。
+この Client ID を元に https://alis.to/oauth2/token へ下記例を参考にリクエストし、Access Token, Refresh Token, ID Tokenを取得します。
 
 
 リクエスト例
@@ -106,9 +106,9 @@ grant_type=authorization_code
 - code_verifier: [同意画面へのURL作成方法](/authorization-url/) で作成した code_verifier
 
 
-### 手順３：ID tokenの検証
+### 手順３：ID Tokenの検証
 
-ID token の署名を検証します。検証方法については [ID token の検証](/idtoken-verify/)を確認ください。
+ID Token の署名を検証します。検証方法については [ID Token の検証](/idtoken-verify/)を確認ください。
 
 ### 手順４：API 実行サンプル
 
