@@ -8,6 +8,10 @@ ALIS OAuth では権限によって利用できる Web API を制限しており
 ### write 権限
 読み取り/書き込み用の権限。read に加えて、リソースの作成(POST)、更新(PUT)、削除(DELETE)が可能。
 
+### 実行時のパス
+下記パスに対して、各種 API を実行してください。
+https://alis.to/oauth2api/
+
 ## 権限と利用できる API の対応表
 
 | メソッド | API パス/概要 | read | write | API ドキュメント |

@@ -50,12 +50,13 @@ ID Token の署名を検証します。検証方法については [ID Token の
 
 取得したアクセストークン(Access Token)を Authorization ヘッダに付与することで、API 実行を行えます。
 実行できる API は同意時に指定した scope によって異なります。詳細は[権限一覧](/scopes/)を確認ください。
+APIの実行は `https://alis.to/oauth2api/` のパスに対して実施ください。 
 また、アクセストークンには有効期限が設定されています。再取得する場合は[アクセストークンの再取得](/refresh-token/)を参照してください
 
-
 ```javascript
+  const url = "https://alis.to/oauth2api/me/info"
   const result = await fetch(url, {
-    method: "POST",
+    method: "GET",
     headers: {
       "Authorization": `${access_token}`,
       "Content-Type": "application/json; charset=utf-8"
