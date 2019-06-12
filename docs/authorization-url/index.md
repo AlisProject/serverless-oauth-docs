@@ -9,6 +9,8 @@
 * redirect_uri
 * scope
 * code_challenge
+* code_challenge_method
+* response_type
 
 ## 各パラメータ説明
 
@@ -63,6 +65,12 @@ function get_code_verifier() {
 }
 ```
 
+### code_challenge_method
+code_challenge 生成に利用した関数を指定します。上記生成例の場合は SHA256 を利用しているため `S256` を指定します。
+
+### response_type
+固定値 `code` を指定します。
+
 ## URL例
 
 
@@ -70,8 +78,10 @@ function get_code_verifier() {
 * redirect_uri = `https://example.com`
 * scope = `read`
 * code_challenge = `hcCb3gToI1GPZeS_SIYWvaNT_5u0GB1oqOGQJqRKMSE`
+* code_challenge_method = `S256`
+* response_type = `code`
 
 上記パラメーターの場合,URL は下記の通りです。
 
-    https://alis.to/oauth-authenticate?client_id=12345678901234&redirect_uri=https%3A%2F%2Fexample.com&scope=read&code_challenge=hcCb3gToI1GPZeS_SIYWvaNT_5u0GB1oqOGQJqRKMSE
+    https://alis.to/oauth-authenticate?client_id=12345678901234&redirect_uri=https%3A%2F%2Fexample.com&scope=read&code_challenge=hcCb3gToI1GPZeS_SIYWvaNT_5u0GB1oqOGQJqRKMSE&code_challenge_method=S256&response_type=code
 
