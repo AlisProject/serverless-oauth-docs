@@ -37,7 +37,7 @@ https://alis.to/oauth2api/
 | PUT | /me/articles/{article_id}/public/unpublish <br>公開記事を下書きに戻す |  | ○ | [Document](https://alisproject.github.io/api-docs/#/default/put_me_articles_article_id_public_unpublish)
 | PUT | /me/articles/{article_id}/public/ <br>republish_with_header <br>編集記事を公開 |  | ○ | [Document](https://alisproject.github.io/api-docs/#/default/put_me_articles_article_id_public_republish_with_header)
 | GET | /me/articles/{article_id}/like <br>「いいね」を行ったかを確認 | ○ | ○ | [Document](https://alisproject.github.io/api-docs/#/default/get_me_articles_article_id_like)
-| POST | /me/articles/{article_id}/comments <br>てコメントを登録 |  | ○ | [Document](https://alisproject.github.io/api-docs/#/default/post_me_articles_article_id_comments)
+| POST | /me/articles/{article_id}/comments <br>コメントを登録 |  | ○ | [Document](https://alisproject.github.io/api-docs/#/default/post_me_articles_article_id_comments)
 | POST | /me/articles/{article_id}/comments/reply <br>コメントの返信を登録 |  | ○ | [Document](https://alisproject.github.io/api-docs/#/default/post_me_articles_article_id_comments_reply)
 | GET | /me/articles/{article_id}/comments/likes <br>いいねを実行したコメントのID一覧を取得 | ○ | ○ | [Document](https://alisproject.github.io/api-docs/#/default/get_me_articles_article_id_comments_likes)
 | DELETE | /me/comments/{comment_id} <br>コメントを削除 |  | ○ | [Document](https://alisproject.github.io/api-docs/#/default/delete_me_comments_comment_id)
